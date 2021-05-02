@@ -13,7 +13,7 @@ int main()
         cerr << "File could not be opened" << endl;
         exit(EXIT_FAILURE);
     } // end if
-    cout << "Enter the account, name, and balance." << endl
+    cout << "Enter first name, last name, id ,and hash code." << endl
          << "Enter end-of-file to end input.\n? "; // the account number
     string firstName;
     string lastName; // the account owner's name
