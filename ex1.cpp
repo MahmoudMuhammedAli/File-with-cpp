@@ -1,28 +1,25 @@
 #include <iostream>
 #include <string>
-#include <fstream> // contains file stream processing types
-#include <cstdlib> // exit function prototype
+#include <fstream> 
+#include <cstdlib> 
 using namespace std;
 int main()
 {
-    // ofstream constructor opens file
     ofstream outClientFile("file_example.txt", ios::out);
-    // exit program if unable to create file
-    if (!outClientFile) // overloaded ! operator
+    if (!outClientFile)
     {
         cerr << "File could not be opened" << endl;
         exit(EXIT_FAILURE);
     } // end if
     cout << "Enter first name, last name, id ,and hash code." << endl
-         << "Enter end-of-file to end input.\n? "; // the account number
+         << "Enter end-of-file to end input.\n? ";
     string firstName;
-    string lastName; // the account owner's name
+    string lastName;
     int id;
-    string hash; // the account balance
-    // read account, name and balance from cin, then place in file
+    string hash;
     while (cin >> firstName >> lastName >> id >> hash)
     {
         outClientFile << firstName << ' ' << lastName << ' ' << id << ' ' << hash << endl;
         cout << "? ";
-    } // end while
-} // end main
+    }
+} 
